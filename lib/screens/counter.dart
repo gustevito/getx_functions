@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
+import '../widgets/floatingbt.dart';
 
 class MyCounter extends StatelessWidget {
   // You can ask Get to find a Controller that is being used by another page and redirect you to it.
@@ -11,13 +12,13 @@ class MyCounter extends StatelessWidget {
   Widget build(context) {
     // Access the updated count variable
     return Scaffold(
-      body: Center(child: Text("${c.count}")),
-      appBar: AppBar(),
-    );
+        body: Center(child: Text("${c.count}")),
+        appBar: AppBar(),
+        floatingActionButton: FloatingBtn());
   }
 }
 
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
+@override
+Widget build(BuildContext context) {
+  return const Placeholder();
+}
